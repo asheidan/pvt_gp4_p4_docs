@@ -136,7 +136,7 @@ For more information, see specification \cite{spec}.
 \section{System description}
 	\subsection{UML}
 
-		After the preliminary system design was ready a basic UML has was created to show the client the structure of the implementation. This UML can be seen in Appendix \ref{doc:uml}.
+		After the preliminary system design was ready a basic UML has was created to show the client the structure of the implementation. This UML can be seen in \autoref{fig:uml}.
 
 		Note that this is a preliminary design and could be changed during the course of project. 
 
@@ -149,7 +149,7 @@ For more information, see specification \cite{spec}.
 
 	\subsection{Flowchart}
 
-		To show the flow of the program in the terminal a flowchart has been produced, this flowchart shows the way from the card swipe to the printing of the selected offers or recipes. This flowchart can be seen in Appendix \ref{doc:flowchart}.
+		To show the flow of the program in the terminal a flowchart has been produced, this flowchart shows the way from the card swipe to the printing of the selected offers or recipes. This flowchart can be seen in \autoref{fig:flowchart}.
 
 		In the chart all the different actions of the terminal can be seen, these actions are represented as diamonds. All the processes are represented as squares.
    
@@ -164,8 +164,9 @@ For more information, see specification \cite{spec}.
 
 	In this section we will describe how the systems graphical user interface will look and behave. The user group for this system is very diverse, hence it must be adjusted so it can be used by people that are colorblind, visually impaired or have any other handicap. Since we don't yet know the specifications on the machine that the system will operate on we will try to strive for a GUI that adjust its content dynamically depending on resolution. 
 
-
 	The only form of user input to the GUI will also be done via buttons, mostly for navigation and browsing along with a few commands such as print and log out. To gain access to the machine the user will have to swipe their ICA membership card. 
+	
+	The mockups for the GUI are available in \figurename{} \ref{fig:gui_login}, \ref{fig:gui_welcome}, \ref{fig:gui_offers} and \ref{fig:gui_recipe}.
 
 	\subsection{Accessability}
 		We will strive to make the overall system very easy to use and always have help available, either as pictured tutorials, help text or an easy way to contact support staff on location. 
@@ -179,11 +180,12 @@ For more information, see specification \cite{spec}.
 			Since some of the users might not have alot of experience with interactive systems we will strive for a very simplistic GUI design. It should not possible for the user the misunderstand or misinterpret the actions he/she is able to perform, or understand the data presented.
 
 		\subsubsection{Visual impairment}
-			The system will strive to be usable by most of the visually impaired population except blind people as stated in section \ref{limitations}.
+			The system will strive to be usable by most of the visually impaired population except blind people as stated in \autoref{limitations}.
 
 			In order to achieve this all buttons, text and labels will be much larger then normal. This can easily be achieved without making the GUI "messy" since we have very few buttons in a big area. Any exact values cannot be given before we receive the exact specifications for the machine. 
+
 \section{Schedule}
-	We have devised a schedule that can be viewed in Appendix \ref{doc:schedule}.  The tasks in the schedule have been set up in a way so that they both work as milesones and tasks. All of which derives from functionally in the system. The schedule also specifies how much time we plan to spend on each task. A total of 570 hours have been planned for the different tasks, out of a total of 672 hours available. Which means we have a buffer of 102 hours. This time can be used for unidentified problems that might occur during the life of the project.
+	We have devised a schedule that can be viewed in \autoref{fig:schedule}.  The tasks in the schedule have been set up in a way so that they both work as milesones and tasks. All of which derives from functionally in the system. The schedule also specifies how much time we plan to spend on each task. A total of 570 hours have been planned for the different tasks, out of a total of 672 hours available. Which means we have a buffer of 102 hours. This time can be used for unidentified problems that might occur during the life of the project.
 
 \section{Quality Assurance}
 	The following sections will discuss the different quality goals, risks and areas of responsibility. 
@@ -193,7 +195,7 @@ For more information, see specification \cite{spec}.
 	\subsection{Intuitive interface for a diverse customer base}
 	\begin{itemize}
 	 	\item A code coverage of at least 90\%
-		\item An LCOM (defined by Henderson-Sellers) of no more than 1.
+		\item An LCOM (defined by Henderson-Sellers) of no more than 0.6.
 		\item Fan-In and Fan-Out values of no more than 5
 		\item Satisfy all the requirements in the specification
 	\end{itemize}
@@ -215,7 +217,7 @@ For more information, see specification \cite{spec}.
 		\item[Misinterpreted specification]
 			If the specification is misinterpreted it could lead to a system that does not meet all the customers requirements. This will be mitigated by asking costumer whenever a requirement is unclear.
 		\item[Lack of experience with development tools]
-			Most of the group are inexperienced with the tools that will be used to develop the software. Such as, Rails, Ruby, HTML, CSS-templates, JavaScript and SQL. This could lead to the project taking more time than if we were experienced, it also puts more pressure on the teammembers with the knowledge of the tools.
+			Most of the group are inexperienced with the tools that will be used to develop the software. Such as, Rails, Ruby, HTML, CSS-templates, JavaScript and SQL. This could lead to the project taking more time than if we were experienced, it also puts more pressure on the team members with the knowledge of the tools.
 			We will try to mitigate this by having the team members study up on the parts that they are inexperienced with so that we all can contribute.
 		\item[Testing GUI for a diverse customer base]
 			Since we have limited time on the project it will be hard to have an extensive testing phase where a very diverse group of people will test the system. This could lead to the GUI not being user friendly for all intended customers. We will try to mitigate this by carefully analyzing which people could be using the system and from there develop a GUI that they all could feel comfortable using.
@@ -240,24 +242,52 @@ For more information, see specification \cite{spec}.
     \clearpage
     \appendix
 
-         \section{UML Class Diagram}
+            \begin{figure}[ht]
+               \centering
+                  \includegraphics[scale=.3]{images/gui/ica1.png}
+               \caption{The first screen the user is greeted with}
+               \label{fig:gui_login}
+            \end{figure}
+
+            \begin{figure}[ht]
+               \centering
+                  \includegraphics[scale=.3]{images/gui/ica2.png}
+               \caption{The "Welcome" screen}
+               \label{fig:gui_welcome}
+            \end{figure}
+
+            \begin{figure}[ht]
+               \centering
+                  \includegraphics[scale=.3]{images/gui/icaoffers.png}
+               \caption{The view of offers}
+               \label{fig:gui_offers}
+            \end{figure}
+
+            \begin{figure}[ht]
+               \centering
+                  \includegraphics[scale=.3]{images/gui/icarecipe.png}
+               \caption{The view of recipe}
+               \label{fig:gui_recipe}
+            \end{figure}
+
              \begin{figure}[htp]
                  \centering
                  \includegraphics[scale=.83]{./images/uml.png}
-                 \caption{A initial UML class diagram. \label{doc:uml}}
+                 \caption{An initial UML class diagram.}
+                 \label{fig:uml}
              \end{figure}
 
-         \section{Flow Chart}
              \begin{figure}[htp]
                  \centering
                  \includegraphics[scale=.5]{./images/flowchart.png}
-                 \caption{A flow chart describing the system. \label{doc:flowchart}}
+                 \caption{A flow chart describing the system.}
+                 \label{fig:flowchart}
              \end{figure}
-\newpage
-	\section{Schedule}
+
              \begin{figure}[htp]
                  \centering
-                 \includegraphics[scale=.5]{./images/flowchart.png}
-                 \caption{A flow chart describing the system. \label{doc:schedule}}
+                 \includegraphics[scale=2]{./images/schedule.pdf}
+                 \caption{A flow chart describing the system.}
+                 \label{fig:schedule}
              \end{figure}
 \end{document}
