@@ -112,32 +112,32 @@ For this project the group will design and implement a customer terminal for a l
      
 For the final presentation of the terminal, where the finished product will be presented for the customer the terminal should be able to run on a regular PC with a external card scanner over an USB interface, also a printer will be attached as the customer should be able to print the selected information. The project should also support a touch screen if this is added later in the project.
  
-Other requirement for the usability of the terminal is that the general "look and feel" for the GUI should be similar to ICA's customer terminals and that the terminal would have a very diverse user group so the ease of use is very important. The systems should have a different interface for adding and changing customer data, product data, recipes, etc. This interface should be very simple, as in the real world this would be provided by external systems and therefore a very advanced interface is not needed. Another requirement for the systems implementation is that should be done using the TDD-method and principles.
+Other requirement for the usability of the terminal is that the general "look and feel" for the GUI should be similar to ICA's customer terminals and that the terminal would have a very diverse user group so the ease of use is very important. The systems should have a different interface for adding and changing customer data, product data, recipes, etc. This interface should be very simple, as in the real world this would be provided by external systems and therefore a very advanced interface is not needed. Another requirement for the implementation is that should be done using the TDD-method and principles.
     
 During the project the group will have to provided the client with a project plan, a report with basic design decisions, GUI mock-up, assumptions, risk management and the time plan for the project, weekly progress reports, reports of what has happened, been done (or not), data on project progress and individual effort, and a final report. The final report should summarize the project, its results (analysis/design, GUI, code), lessons learned and data on individual effort. 
     
-The project group is consisting of 6 members and the time period of the project is 6 weeks. The purpose of the project is for the group member to practice their skills of working in project teams, project management, a good implementation with a good design and writing reports. 
+The project group is consisting of six members and the time period of the project is six weeks. The purpose of the project is for the group member to practice their skills of working in project teams, project management, a good implementation with a good design and writing reports. 
 
 For more information, see specification \cite{spec}.
-	\subsection{Assuptions}
-		Some parts of the specification were unclear so one assumption had to be made. The assumption is listed below.
-		That both individual offers and general offers will be interpreted the same. The only difference is that there are no conditions that have to be met to be offered the general offers.
+	\subsection{Assumptions}
+		Some parts of the specification were unclear so an assumption had to be made. The assumption is listed below.
+		That both individual offers and general offers will be interpreted the same. The only difference being that there are no conditions that have to be met to be offered the general offers.
 	\subsection{Limitations}\label{limitations}
-		The operation that the customers will be able to preform on the terminal are limited to the specification and with the specification some limitations will follow. These limitations are listed below.
+		The operations that the customers will be able to perform at the terminal are limited to the specification and with the specification some limitations will follow. These limitations are listed below.
  
-		Blind people will not be able to use the program, as the interface is graphical. The terminal could be made with a sound interface but no speakers will be linked to the system according to the specification.
+		Blind people will not be able to use the terminal, as the interface is graphical. The terminal could be made with a sound interface but no speakers will be linked to the system according to the specification.
 
 \section{Project management}
 	\begin{itemize}
     \item All written reports and presentations will be in English.
     \item For time tracking a spreadsheet in GoogleDocs will be used.
-    \item Group meetings every week
+    \item Group meetings every week.
 	\end{itemize}
 
 \section{System description}
 	\subsection{UML}
 
-		After the preliminary system design was ready a basic UML has was created to show the client the structure of the implementation. This UML can be seen in \autoref{fig:uml}.
+		After the preliminary system design was ready a basic UML was created to show the client the structure of the implementation. This UML can be seen in \autoref{fig:uml}.
 
 		Note that this is a preliminary design and could be changed during the course of project. 
 
@@ -163,30 +163,30 @@ For more information, see specification \cite{spec}.
 		The project will be developed using TDD, and team members with little experience of the tools may need to work in pairs.
 \section{GUI}
 
-	In this section we will describe how the systems graphical user interface will look and behave. The user group for this system is very diverse, hence it must be adjusted so it can be used by people that are colorblind, visually impaired or have any other handicap. Since we don't yet know the specifications on the machine that the system will operate on we will try to strive for a GUI that adjust its content dynamically depending on resolution. 
+	In this section we will describe how the system's graphical user interface will look and behave. The user group for this system is very diverse, hence it must be adjusted so it can be used by people that are colorblind, visually impaired or have any other handicap. Since we don't yet know the specifications on the machine that the system will operate on we will try to strive for a GUI that adjust its content dynamically depending on resolution. 
 
 	The only form of user input to the GUI will also be done via buttons, mostly for navigation and browsing along with a few commands such as print and log out. To gain access to the machine the user will have to swipe their ICA membership card. 
 	
-	The mockups for the GUI are available in \figurename{} \ref{fig:gui_login}, \ref{fig:gui_welcome}, \ref{fig:gui_offers} and \ref{fig:gui_recipe}.
+	The mock-ups for the GUI are available in \figurename{} \ref{fig:gui_login}, \ref{fig:gui_welcome}, \ref{fig:gui_offers} and \ref{fig:gui_recipe}.
 
-	\subsection{Accessability}
+	\subsection{Accessibility}
 		We will strive to make the overall system very easy to use and always have help available, either as pictured tutorials, help text or an easy way to contact support staff on location. 
 
 		\subsubsection{Colorblindness}
 			Around 8\% of males and 1\% of females suffer from colorblindness of different degree, therefore we will strive for a system that does not rely on colors at all to communicate with the user. There are even people that can only see shades of gray, hence why no reliance on colors is used. Even if we tried to adjust it to fit one group of colorblind people, it would not work on another group.
 
- 			Since the system is very basic to begin with this will not be a difficult task to accomplish and the main focus will be to distinguish buttons from the background.  A button should look like a raised button and not just a text label.
+ 			Since the system is very basic to begin with this will not be a difficult task to accomplish and the main focus will be to distinguish buttons from the background. A button should look like a raised button and not just a text label.
 
 		\subsubsection{Simplicity}
-			Since some of the users might not have alot of experience with interactive systems we will strive for a very simplistic GUI design. It should not possible for the user the misunderstand or misinterpret the actions he/she is able to perform, or understand the data presented.
+			Since some of the users might not have a lot of experience with interactive systems we will strive for a very simplistic GUI design. It should not possible for the user to misunderstand or misinterpret the actions he/she is able to perform, or understand the data presented.
 
 		\subsubsection{Visual impairment}
 			The system will strive to be usable by most of the visually impaired population except blind people as stated in \autoref{limitations}.
 
-			In order to achieve this all buttons, text and labels will be much larger then normal. This can easily be achieved without making the GUI "messy" since we have very few buttons in a big area. Any exact values cannot be given before we receive the exact specifications for the machine. 
+			In order to achieve this all buttons, text and labels will be much larger then normal. This can easily be achieved without making the GUI ``messy'' since we have very few buttons in a big area. Any exact values cannot be given before we receive the exact specifications for the machine. 
 
 \section{Schedule}
-	We have devised a schedule that can be viewed in \autoref{fig:schedule}.  The tasks in the schedule have been set up in a way so that they both work as milesones and tasks. All of which derives from functionally in the system. The schedule also specifies how much time we plan to spend on each task. A total of 570 hours have been planned for the different tasks, out of a total of 672 hours available. Which means we have a buffer of 102 hours. This time can be used for unidentified problems that might occur during the life of the project.
+	We have devised a schedule that can be viewed in \autoref{fig:schedule}.  The tasks in the schedule have been set up in a way so that they both work as milestones and tasks. All of which derives from functionally in the system. The schedule also specifies how much time we plan to spend on each task. A total of 570 hours have been planned for the different tasks, out of a total of 672 hours available. Which means we have a buffer of 102 hours. This time can be used for unidentified problems that might occur during the life of the project.
 
 \section{Quality Assurance}
 	The following sections will discuss the different quality goals, risks and areas of responsibility. 
@@ -210,9 +210,9 @@ For more information, see specification \cite{spec}.
 			As the touchscreen has been ordered but the arrival date is unknown we might get a very limited time to test our system with the touchscreen.
 			To mitigate this we will try to have our system working with a mouse. This way there should be no need to test our system with the touch screen. Because most systems does distinguish between input from a mouse or a touchscreen. 
         	\item[Touch screen might not show up]
-			If the touch screen never arrives because of some problems with delivery or availability. We won't be able to present our final product.To avoid this happening we will try to have the product also working with a regular mouse pointer so that we can present our system in that way.
+			If the touch screen never arrives because of some problems with delivery or availability, we won't be able to present our final product. To avoid this happening we will try to have the product also working with a regular mouse pointer so that we can present our system that way.
         	\item[Loss of team members]
-			Since there are six members in the team there is a high chance that one or more members will become unavailable because of sickness or due to some other circumstance. This could lead to loss of competence in for example SQL that only a few members know. It can also lead to loss of knowledge in our own system.To mitigate this the members will have to inform the rest of the team as fast as possible so that they can decide what to do. Also the members will inform the group of what they are working with and how the parts they have developed works. This way there should be no real loss knowledge of the system.
+			Since there are six members in the team there is a high chance that one or more members will become unavailable because of sickness or due to some other circumstance. This could lead to loss of competence in for example SQL that only a few members know. It can also lead to loss of knowledge in our own system. To mitigate this the members will have to inform the rest of the team as fast as possible so that they can decide what to do. Also the members will inform the group of what they are working with and how the parts they have developed works. This way there should be no real loss knowledge of the system.
         	\item[Conflicts]
 			In larger groups there might be many different ideas which can lead to conflicts within the group.This will be mitigated by having lots of meetings where all the ideas are discussed thoroughly until a agreement is reached and if no agreement is met then a there will be a vote on which idea to use.
 		\item[Misinterpreted specification]
