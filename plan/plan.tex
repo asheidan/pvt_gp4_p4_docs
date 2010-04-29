@@ -1,0 +1,127 @@
+\documentclass[a4paper,twoside,titlepage]{article}
+
+%--- Packages ----------------------------------------------------------------
+\usepackage{a4}
+\usepackage[english]{babel}
+\addto\extrasswedish{%
+	\def\sectionautorefname{Avdelning}%
+	\def\subsectionautorefname{Underavdelning}%
+	\def\figureautorefname{Figur}%
+	\def\tableautorefname{Tabell}%
+}
+\addto\extrasenglish{%
+	\def\outputautorefname{Output}%
+}
+\usepackage[inner=2cm,top=2cm,outer=3cm,bottom=1cm,includehead,includefoot]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{moreverb}
+\usepackage{float}
+\usepackage{graphicx}
+%\usepackage{makeidx}
+%\makeindex
+% Don't forget to run makeindex and include \printindex
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=magenta,urlcolor=blue]{hyperref} % Reference by title
+
+\setcounter{tocdepth}{2} % Only subsections in toc
+
+%--- Definitions -------------------------------------------------------------
+
+\def\author			{Group 4}
+\def\course			{5DV087 VT10}
+\def\coursename	    {Software Engineering}
+\def\delivery		{Project Plan}
+\def\version		{0.1}
+\def\trivialname	{Customer Terminal}
+\def\tutor			{}
+
+
+% New output float
+\floatstyle{boxed}
+\newfloat{program}{thp}{lop}
+\floatname{program}{Program}
+\newfloat{output}{thp}{lop}
+\floatname{output}{Output}
+
+%\restylefloat{figure}
+
+\hypersetup{
+pdfauthor = {\author},
+pdftitle = {\trivialname{} - \delivery},
+pdfsubject = {\coursename},
+pdfkeywords = {umu, edu, ruby, plan}
+}
+
+
+\newcommand{\HUGE}{\fontsize{36}{42}\selectfont{}}
+\newcommand{\helvetica}{\fontfamily{phv}\selectfont}
+\newcommand{\degree}{\ensuremath{^\circ}}
+\pagestyle{fancy}
+	\lhead[\coursename]{\today}
+	\chead[\textsc{\trivialname~- \delivery}]{\textsc{\trivialname~- \delivery}}
+	\rhead[\today]{\course}
+	
+	\lfoot[\thepage]{\author}
+	\cfoot[]{}
+	\rfoot[\email]{\thepage}
+	
+	\renewcommand{\headrulewidth}{0.4pt} 
+	\renewcommand{\footrulewidth}{0.4pt}
+
+%-----------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty}
+%--- Titlepage ---------------------------------------------------------------
+\begin{titlepage}
+	{
+	\helvetica
+	\begin{flushright}
+		\small \coursename{} \course\\
+	\end{flushright}
+	\begin{center}
+		\LARGE \trivialname\\
+		\HUGE { \textbf{\delivery}} \\
+		\small \textbf{\author}\\
+		\normalsize {
+    		Emil Eriksson (c07een)\\
+    		Martin Åslin (c07man)\\
+    		Johan Norberg (c07jng)\\
+    		Rickard Westerlund (c07rwd)\\
+    		Per Björklund (c07pbd)\\
+    		Javid Jou (dv08dju)\\
+    		}
+		\vspace{95mm}
+	\end{center}
+	}
+	\begin{flushright}
+		\subsection*{Assistant}
+		Tor Sterner \href{mailto:tors@cs.umu.se}{tors@cs.umu.se}
+		\subsection*{Examinator}
+		Jürgen Böstler \href{mailto:jubo@cs.umu.se}{jubo@cs.umu.se}
+	\end{flushright}
+\end{titlepage}
+
+\pagestyle{fancy}
+\pagenumbering{roman}
+%--- Table of contents -------------------------------------------------------
+% \tableofcontents
+% \clearpage
+% \newpage
+
+%--- Document ----------------------------------------------------------------
+\pagenumbering{arabic}
+
+%-----------------------------------------------------------------------------
+\section{Introduction} % (fold)
+\label{sec:intro}
+
+% section introduction (end)
+
+% \clearpage
+% \appendix
+% \newpage
+% \section{Source code} % (fold)
+% \label{sec:source_code}
+
+% section source_code (end)
+\end{document}
