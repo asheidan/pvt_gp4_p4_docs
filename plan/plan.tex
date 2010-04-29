@@ -14,7 +14,7 @@
 %\makeindex
 % Don't forget to run makeindex and include \printindex
 \usepackage{fancyhdr}
-% \usepackage[colorlinks=true,linkcolor=magenta,urlcolor=blue]{hyperref} % Reference by title
+ \usepackage[colorlinks=true,linkcolor=magenta,urlcolor=blue]{hyperref} % Reference by title
 
 \setcounter{tocdepth}{2} % Only subsections in toc
 
@@ -38,12 +38,12 @@
 
 %\restylefloat{figure}
 
-% \hypersetup{
-% pdfauthor = {\author},
-% pdftitle = {\trivialname{} - \delivery},
-% pdfsubject = {\coursename},
-% pdfkeywords = {umu, edu, ruby, plan}
-% }
+ \hypersetup{
+ pdfauthor = {\author},
+ pdftitle = {\trivialname{} - \delivery},
+ pdfsubject = {\coursename},
+ pdfkeywords = {umu, edu, ruby, plan}
+ }
 
 
 \newcommand{\HUGE}{\fontsize{36}{42}\selectfont{}}
@@ -56,7 +56,7 @@
 	
 	\lfoot[\thepage]{\author}
 	\cfoot[]{}
-	\rfoot[\email]{\thepage}
+	\rfoot[\author]{\thepage}
 	
 	\renewcommand{\headrulewidth}{0.4pt} 
 	\renewcommand{\footrulewidth}{0.4pt}
@@ -107,7 +107,7 @@
 %-----------------------------------------------------------------------------
 
 \section{Problem description}
-For this project the group will design and implement a customer terminal for a large food store. To use the terminal the customer should only have to swipe their customer card and the terminal should display the correct information. The terminal should display general offers, which every customer can use, and special offers, which are unique for the customers that have fulfilled the requirement of the offer. The terminal should also be able to display other information e.g recipes. The offers themselves can give a percentage discount on the amount or a predefined discount on a specific item. To generate the specific offers the terminal should have a database of some sort which contains information about common and/or regular purchases of the customer that could be compared against the active offers. When the customers is presented with a couple of these offers, they should be able to select and print them, this also applies to other information displayed on the terminal. 
+For this project the group will design and implement a customer terminal for a large food store. To use the terminal the customer should only have to swipe their customer card and the terminal should display the correct information. The terminal should display general offers, which every customer can use, and special offers, which are unique for the customers that have fulfilled the requirement of the offer. The terminal should also be able to display other information e.g. recipes. The offers themselves can give a percentage discount on the amount or a predefined discount on a specific item. To generate the specific offers the terminal should have a database of some sort which contains information about common and/or regular purchases of the customer that could be compared against the active offers. When the customers is presented with a couple of these offers, they should be able to select and print them, this also applies to other information displayed on the terminal. 
      
 For the final presentation of the terminal, where the finished product will be presented for the customer the terminal should be able to run on a regular PC with a external card scanner over an USB interface, also a printer will be attached as the customer should be able to print the selected information. The project should also support a touch screen if this is added later in the project.
  
