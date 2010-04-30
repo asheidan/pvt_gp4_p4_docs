@@ -3,7 +3,7 @@ TARGET ?= $(SOURCE:.tex=.pdf)
 
 VIEW	 := osascript -e "tell application \"Skim\" to revert document \"$(TARGET)\"" || open -a Skim "$(TARGET)"
 
-default: view
+default: $(TARGET)
 
 
 ### Checking for dependencies ################################################
@@ -35,18 +35,21 @@ BIBDB :=$(BIBDB).bib
 endif
 endif
 
+FIGURES := $(shell grep "^[^%]*\\includegraphics[{\[]" $(SOURCE) | sed 's/.*{\([^}]*\)}.*/\1/')
+
+
 ### Rules ####################################################################
 # Remove default rule
 %.dvi : %.tex
 
 test:
-	@echo $(TARGET) depends on $(DEPS)
+	@echo $(TARGET) depends on $(DEPS) $(FIGURES)
 
 view: $(TARGET)
 	$(VIEW)
 
 %.aux %.idx %.lof %.lot %.nlo %.glo %.toc: %.tex | $(INCLUDES) $(filter %.eps,$(FIGURES))
-	pdflatex $<
+	latex $<
 
 %.ind: %.idx
 	makeindex $<
@@ -60,11 +63,14 @@ view: $(TARGET)
 %.nls: %.nlo
 	makeindex $< -s nomencl.ist -o $@
 
-%.pdf: %.tex $(DEPS)
+%.pdf: %.tex $(DEPS) $(FIGURES)
 	pdflatex $<
 
 %.dvi: %.tex $(DEPS)
-	pdflatex $<
+	latex $<
+
+%.pdf: %.png
+	convert $< $@
 
 clean:
 	-rm -f *.aux *.bbl *.blg *.glo *.gls *.idx *.ilg *.ind *.lof *.log *.out *.toc
