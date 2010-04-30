@@ -1,5 +1,5 @@
-SOURCE ?= plan.tex
-TARGET ?= $(SOURCE:.tex=.pdf)
+SOURCE := plan.tex
+TARGET := $(SOURCE:.tex=.pdf)
 
 VIEW	 := osascript -e "tell application \"Skim\" to revert document \"$(TARGET)\"" || open -a Skim "$(TARGET)"
 
