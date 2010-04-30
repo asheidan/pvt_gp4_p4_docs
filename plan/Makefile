@@ -3,7 +3,7 @@ TARGET ?= $(SOURCE:.tex=.pdf)
 
 VIEW	 := osascript -e "tell application \"Skim\" to revert document \"$(TARGET)\"" || open -a Skim "$(TARGET)"
 
-default: view
+default: $(TARGET)
 
 
 ### Checking for dependencies ################################################
