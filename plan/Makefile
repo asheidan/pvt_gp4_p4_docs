@@ -46,7 +46,7 @@ view: $(TARGET)
 	$(VIEW)
 
 %.aux %.idx %.lof %.lot %.nlo %.glo %.toc: %.tex | $(INCLUDES) $(filter %.eps,$(FIGURES))
-	latex $<
+	pdflatex $<
 
 %.ind: %.idx
 	makeindex $<
@@ -64,7 +64,7 @@ view: $(TARGET)
 	pdflatex $<
 
 %.dvi: %.tex $(DEPS)
-	latex $<
+	pdflatex $<
 
 clean:
 	-rm -f *.aux *.bbl *.blg *.glo *.gls *.idx *.ilg *.ind *.lof *.log *.out *.toc
