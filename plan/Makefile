@@ -35,12 +35,15 @@ BIBDB :=$(BIBDB).bib
 endif
 endif
 
+FIGURES := $(shell grep "^[^%]*\\includegraphics[{\[]" $(SOURCE) | sed 's/.*{\([^}]*\)}.*/\1/')
+
+
 ### Rules ####################################################################
 # Remove default rule
 %.dvi : %.tex
 
 test:
-	@echo $(TARGET) depends on $(DEPS)
+	@echo $(TARGET) depends on $(DEPS) $(FIGURES)
 
 view: $(TARGET)
 	$(VIEW)
@@ -60,11 +63,14 @@ view: $(TARGET)
 %.nls: %.nlo
 	makeindex $< -s nomencl.ist -o $@
 
-%.pdf: %.tex $(DEPS)
+%.pdf: %.tex $(DEPS) $(FIGURES)
 	pdflatex $<
 
 %.dvi: %.tex $(DEPS)
 	latex $<
+
+%.pdf: %.png
+	convert $< $@
 
 clean:
 	-rm -f *.aux *.bbl *.blg *.glo *.gls *.idx *.ilg *.ind *.lof *.log *.out *.toc
